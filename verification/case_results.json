@@ -1,0 +1,282 @@
+{
+ "CYCLE_R": {
+  "types": 16,
+  "labelled_boundaries": 6570,
+  "initial_states": 6570,
+  "deleted_per_round": [],
+  "final_states": 6570,
+  "empty_fibres": [],
+  "excluded": false
+ },
+ "I": {
+  "types": 25,
+  "labelled_boundaries": 10350,
+  "initial_states": 401040,
+  "deleted_per_round": [
+   354690,
+   8820,
+   90
+  ],
+  "final_states": 37440,
+  "empty_fibres": [
+   "[35]"
+  ],
+  "excluded": true
+ },
+ "II": {
+  "types": 28,
+  "labelled_boundaries": 10890,
+  "initial_states": 467100,
+  "deleted_per_round": [
+   389250,
+   39780,
+   630
+  ],
+  "final_states": 37440,
+  "empty_fibres": [
+   "(14)(24)",
+   "[14]",
+   "[24]",
+   "[35]"
+  ],
+  "excluded": true
+ },
+ "III": {
+  "types": 32,
+  "labelled_boundaries": 13590,
+  "initial_states": 1274850,
+  "deleted_per_round": [
+   1182690,
+   41040,
+   13680
+  ],
+  "final_states": 37440,
+  "empty_fibres": [
+   "(13)(34)",
+   "(14)(24)",
+   "(14)(34)",
+   "(24)(34)",
+   "(24)(35)",
+   "(25)(34)",
+   "(34)(35)",
+   "[14]"
+  ],
+  "excluded": true
+ },
+ "IV": {
+  "types": 32,
+  "labelled_boundaries": 13590,
+  "initial_states": 1279530,
+  "deleted_per_round": [
+   1180170
+  ],
+  "final_states": 99360,
+  "empty_fibres": [],
+  "excluded": false
+ },
+ "V": {
+  "types": 33,
+  "labelled_boundaries": 13680,
+  "initial_states": 1476810,
+  "deleted_per_round": [
+   1336950,
+   39600,
+   450,
+   450
+  ],
+  "final_states": 99360,
+  "empty_fibres": [
+   "[14]"
+  ],
+  "excluded": true
+ },
+ "VI": {
+  "types": 33,
+  "labelled_boundaries": 13680,
+  "initial_states": 1472130,
+  "deleted_per_round": [
+   1344600,
+   75960,
+   14130
+  ],
+  "final_states": 37440,
+  "empty_fibres": [
+   "(13)(34)",
+   "(14)(24)",
+   "(14)(34)",
+   "(24)(34)",
+   "(24)(35)",
+   "(25)(34)",
+   "(34)(35)",
+   "[14]",
+   "[35]"
+  ],
+  "excluded": true
+ },
+ "VII": {
+  "types": 34,
+  "labelled_boundaries": 13770,
+  "initial_states": 1674090,
+  "deleted_per_round": [
+   1493730,
+   79200,
+   900,
+   900
+  ],
+  "final_states": 99360,
+  "empty_fibres": [
+   "[14]",
+   "[35]"
+  ],
+  "excluded": true
+ },
+ "VIII": {
+  "types": 36,
+  "labelled_boundaries": 16020,
+  "initial_states": 2296980,
+  "deleted_per_round": [
+   2132100,
+   79920,
+   1440,
+   2880,
+   12960,
+   23040,
+   7200
+  ],
+  "final_states": 37440,
+  "empty_fibres": [
+   "(13)(34)",
+   "(13)(45)",
+   "(14)(34)",
+   "(14)(35)",
+   "(14)(45)",
+   "(24)(34)",
+   "(24)(35)",
+   "(24)(45)",
+   "(25)(34)",
+   "(25)(45)",
+   "(34)(35)",
+   "(35)(45)"
+  ],
+  "excluded": true
+ },
+ "IX": {
+  "types": 37,
+  "labelled_boundaries": 16110,
+  "initial_states": 3075390,
+  "deleted_per_round": [
+   2826900,
+   50400
+  ],
+  "final_states": 198090,
+  "empty_fibres": [],
+  "excluded": false
+ },
+ "X": {
+  "types": 38,
+  "labelled_boundaries": 16470,
+  "initial_states": 3226230,
+  "deleted_per_round": [
+   2958030,
+   97200,
+   2160,
+   6120,
+   14400,
+   23760,
+   25200
+  ],
+  "final_states": 99360,
+  "empty_fibres": [
+   "(13)(34)",
+   "(14)(34)",
+   "(24)(34)",
+   "(24)(35)",
+   "(25)(34)",
+   "(34)(35)"
+  ],
+  "excluded": true
+ },
+ "XI": {
+  "types": 39,
+  "labelled_boundaries": 16560,
+  "initial_states": 4004640,
+  "deleted_per_round": [
+   3636180,
+   58320
+  ],
+  "final_states": 310140,
+  "empty_fibres": [],
+  "excluded": false
+ },
+ "XII": {
+  "types": 40,
+  "labelled_boundaries": 16650,
+  "initial_states": 4783050,
+  "deleted_per_round": [
+   4305600
+  ],
+  "final_states": 477450,
+  "empty_fibres": [],
+  "excluded": false
+ },
+ "XIII_R": {
+  "types": 26,
+  "labelled_boundaries": 12240,
+  "initial_states": 49680,
+  "deleted_per_round": [
+   36720,
+   7200
+  ],
+  "final_states": 5760,
+  "empty_fibres": [
+   "(12)(24)",
+   "(12345)",
+   "(13)(23)",
+   "(13)(34)",
+   "(14)(23)",
+   "(14)(34)",
+   "(15)(24)",
+   "(23)(24)",
+   "(23)(35)",
+   "(23)(45)",
+   "(24)(25)",
+   "(24)(34)",
+   "(34)(35)",
+   "(34)(45)"
+  ],
+  "excluded": true
+ },
+ "XIII_L": {
+  "types": 29,
+  "labelled_boundaries": 11250,
+  "initial_states": 226980,
+  "deleted_per_round": [
+   219420,
+   4230,
+   90
+  ],
+  "final_states": 3240,
+  "empty_fibres": [
+   "(12)(15)",
+   "(12)(23)",
+   "(12)(34)",
+   "(12)(45)",
+   "(13)(24)",
+   "(14)(24)",
+   "(15)(23)",
+   "(15)(34)",
+   "(15)(45)",
+   "(23)(34)",
+   "(23)(45)",
+   "(24)(35)",
+   "(24)(45)",
+   "(34)(45)",
+   "[12]",
+   "[15]",
+   "[23]",
+   "[24]",
+   "[34]"
+  ],
+  "excluded": true
+ }
+}

@@ -1,0 +1,55 @@
+name: verify
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Prepare a fresh working copy
+        run: cp -r verification work
+      - name: SHA-256 check of the supplement
+        working-directory: work
+        run: sha256sum -c --quiet CONTENTS.sha256
+      - name: "Table 1 (Props 5.1, 5.2): greatest fixed point for all 15 sets (~40 min, ~2 GB)"
+        working-directory: work
+        env: {OPENBLAS_NUM_THREADS: '1', OMP_NUM_THREADS: '1'}
+        run: |
+          set -eo pipefail
+          python run_cases.py > out_run_cases.log
+      - name: "Props 4.1, 4.2, 6.1, 6.2 inputs: route tables and hand cases"
+        working-directory: work
+        env: {OPENBLAS_NUM_THREADS: '1', OMP_NUM_THREADS: '1'}
+        run: |
+          set -eo pipefail
+          python hand_cases.py > out_hand_cases.log && grep -q HAND_CASES_OK out_hand_cases.log
+      - name: "Theorem 3.3 soundness test on random cubic 5-poles"
+        working-directory: work
+        env: {OPENBLAS_NUM_THREADS: '1', OMP_NUM_THREADS: '1'}
+        run: |
+          set -eo pipefail
+          python soundness_check.py > out_soundness.log && grep -q 'SOUNDNESS_OK 9' out_soundness.log
+      - name: "Second independent implementation of Table 1"
+        working-directory: work
+        env: {OPENBLAS_NUM_THREADS: '1', OMP_NUM_THREADS: '1'}
+        run: |
+          set -eo pipefail
+          python independent_fixpoint.py > independent_results.json
+      - name: "Cross-check of the two implementations"
+        working-directory: work
+        env: {OPENBLAS_NUM_THREADS: '1', OMP_NUM_THREADS: '1'}
+        run: |
+          set -eo pipefail
+          python compare_implementations.py > out_compare.log && grep -q ALL_MATCH out_compare.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verification-output
+          path: work/
+          retention-days: 14
